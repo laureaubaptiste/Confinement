@@ -1,0 +1,1 @@
+<div>Habitat indisponible</div>
