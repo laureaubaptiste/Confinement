@@ -276,6 +276,99 @@ ALTER TABLE RENDRE
 ALTER TABLE RENDRE 
   ADD FOREIGN KEY FK_RENDRE_PROPOSANT_SERVICE (ID_PROPOSANT)
       REFERENCES PROPOSANT_SERVICE (ID_PROPOSANT) ;
+      
+
+# -----------------------------------------------------------------------------
+
+#       Insertion dans la base de donnée
+
+# -----------------------------------------------------------------------------
+
+
+################################################## INSERTION D'HEBERGEMENT ##################################################
+
+INSERT INTO hebergement VALUES ('Appartement', '3', 'Boulogne-Billancourt', TRUE); 
+
+INSERT INTO hebergement VALUES ('Appartement', '2', 'Deauville', TRUE); 
+
+INSERT INTO hebergement VALUES ('Appartement', '1', 'Marseille', TRUE); 
+
+INSERT INTO hebergement VALUES ('Appartement', '6', 'Paris', TRUE); 
+
+INSERT INTO hebergement VALUES ('Appartement', '9', 'Lyon', TRUE); 
+
+
+################################################## INSERTION TRANSPORT ##################################################
+
+INSERT INTO transport VALUES ('moto', 'gazole', TRUE); 
+
+INSERT INTO transport VALUES ('voiture', 'diesel', TRUE); 
+
+INSERT INTO transport VALUES ('vtc', 'naturel', TRUE); 
+
+INSERT INTO transport VALUES ('trottinette', 'naturel', TRUE); 
+
+INSERT INTO transport VALUES ('roller', 'naturel', TRUE); 
+
+
+################################################## INSERTION DON DE MATERIEL MEDICAL ##################################################
+
+INSERT INTO livraison VALUES ('bequille', TRUE); 
+
+INSERT INTO livraison VALUES ('gel hydroalcoolique',  TRUE); 
+
+INSERT INTO livraison VALUES ('masque',  TRUE); 
+
+INSERT INTO livraison VALUES ('desinfectant', TRUE); 
+
+INSERT INTO livraison VALUES ('serviette',  TRUE); 
+
+################################################## INSERTION PARTICULIER ##################################################
+
+INSERT INTO particulier VALUES ('artisan', 'Dupont', 'Louis', 'Monsieur'); 
+
+INSERT INTO particulier VALUES ('restaurateur', 'Larson', 'Nicky', 'Monsieur'); 
+
+INSERT INTO particulier VALUES ('dj','Simpson', 'Homer', 'Monsieur'); 
+
+INSERT INTO particulier VALUES ('maître nageur', 'Darendelle', 'Else', 'Femme'); 
+
+INSERT INTO particulier VALUES ('ingenieur', 'Darendelle', 'Anna', 'Femme'); 
+
+
+################################################## INSERTION PROFESSIONNEL ##################################################
+
+INSERT INTO particulier VALUES ('Hopital Foch'); 
+
+INSERT INTO particulier VALUES ('Hopital Bichat'); 
+
+INSERT INTO particulier VALUES ('Hopital Salpetriere'); 
+
+INSERT INTO particulier VALUES ('Hopital Americain'); 
+
+INSERT INTO particulier VALUES ('Hopital Necker'); 
+
+
+################################################## INSERTION SOIGNANT ##################################################
+
+INSERT INTO soignant VALUES ('Durand', 'Jean', '1 Rue de Boulogne-Billancourt', '92670', 'Nanterre', '0879381539'); 
+
+INSERT INTO soignant VALUES ('Claude', 'Francois' ,'742 Evergreen Terrace', '63693', 'Springfield', '0939555011'); 
+
+INSERT INTO soignant VALUES ('Neutron', 'Jimmy', '542 Dragons Stand', '90454', 'Heart of Thorns', '0988231234'); 
+
+INSERT INTO soignant VALUES ('CARA', 'Alicia', '3 rue Chateau', '50000', 'Los Angeles', '0654555125'); 
+
+INSERT INTO soignant VALUES ('CAEN', 'Corentin', '97 Boulevard Leroy',  '10000', 'Tokyo','0628432312'); 
+
+# -----------------------------------------------------------------------------
+
+#       TRIGGER
+
+# -----------------------------------------------------------------------------
+
+
+
 
 Drop Trigger if exists verif_datefinlivraison;
 
